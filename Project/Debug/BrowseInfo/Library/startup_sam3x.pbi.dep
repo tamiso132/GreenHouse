@@ -1,0 +1,15 @@
+C:\Users\tomalb21\Documents\GitHub\School\Hardware\Project\Debug\BrowseInfo\Library\startup_sam3x.pbi: \
+  C:\Users\tomalb21\Documents\GitHub\School\Hardware\Project\startup_sam3x.c \
+  C:\Users\tomalb21\Documents\GitHub\School\Hardware\Project\at91sam3x8.h \
+  C:\Users\tomalb21\Documents\GitHub\School\Hardware\Project\exceptions.h \
+  C:\Users\tomalb21\Documents\GitHub\School\Hardware\Project\core_cm3.h \
+  C:\Users\tomalb21\AppData\Roaming\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\stdint.h \
+  C:\Users\tomalb21\AppData\Roaming\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\ycheck.h \
+  C:\Users\tomalb21\AppData\Roaming\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\yvals.h \
+  C:\Users\tomalb21\AppData\Roaming\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\DLib_Defaults.h \
+  C:\Users\tomalb21\AppData\Roaming\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\DLib_Config_Normal.h \
+  C:\Users\tomalb21\AppData\Roaming\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\DLib_Product.h \
+  C:\Users\tomalb21\Documents\GitHub\School\Hardware\Project\core_cmInstr.h \
+  C:\Users\tomalb21\AppData\Roaming\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\aarch32\cmsis_iar.h \
+  C:\Users\tomalb21\AppData\Roaming\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\aarch32\iccarm_builtin.h \
+  C:\Users\tomalb21\Documents\GitHub\School\Hardware\Project\core_cmFunc.h

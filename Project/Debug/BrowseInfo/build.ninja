@@ -1,0 +1,153 @@
+##IAR Ninja build file
+
+
+#Rules
+rule COMPILER_XCL
+  command = "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\common\bin\XclFileGenerator.exe" $xclcommand -f "$rspfile_name"
+  description = IAR_NEW_TOOL+++COMPILER_XCL+++$in+++"C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\common\bin\XclFileGenerator.exe" $flags
+  rspfile = $rspfile_name
+  rspfile_content = $flags
+
+rule INDEXER
+  command = "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\common\bin\SourceIndexer.exe" $flags
+  depfile = $out.dep
+  description = IAR_NEW_TOOL+++INDEXER+++$out+++"C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\common\bin\SourceIndexer.exe" $flags
+
+rule MAKEBROWSE
+  command = "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\common\bin\makeBrowseData.exe" $flags
+  description = IAR_NEW_TOOL+++MAKEBROWSE+++$out+++"C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\common\bin\makeBrowseData.exe" $flags
+
+rule PDBLINK
+  command = "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\common\bin\PbdLink.exe" $flags
+  description = IAR_NEW_TOOL+++PDBLINK+++$out+++"C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\common\bin\PbdLink.exe" $flags
+
+
+
+#Build steps
+build C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\Library\exceptions.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\exceptions.c -xcl_file C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\Library\exceptions.xcl -macro_file C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\Library\exceptions.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
+  flags = C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\exceptions.c -o C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\Obj\Library --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\inc\c\DLib_Config_Normal.h" -Ol --predef_macros C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\Library\exceptions.tmp
+  rspfile_name = C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\Library\exceptions.xcl.rsp
+
+build C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\Library\startup_sam3x.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\startup_sam3x.c -xcl_file C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\Library\startup_sam3x.xcl -macro_file C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\Library\startup_sam3x.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
+  flags = C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\startup_sam3x.c -o C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\Obj\Library --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\inc\c\DLib_Config_Normal.h" -Ol --predef_macros C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\Library\startup_sam3x.tmp
+  rspfile_name = C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\Library\startup_sam3x.xcl.rsp
+
+build C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\Library\system_sam3x.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\system_sam3x.c -xcl_file C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\Library\system_sam3x.xcl -macro_file C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\Library\system_sam3x.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
+  flags = C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\system_sam3x.c -o C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\Obj\Library --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\inc\c\DLib_Config_Normal.h" -Ol --predef_macros C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\Library\system_sam3x.tmp
+  rspfile_name = C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\Library\system_sam3x.xcl.rsp
+
+build C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\Date.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\src\Date.c -xcl_file C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\Date.xcl -macro_file C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\Date.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
+  flags = C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\src\Date.c -o C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\Obj\src --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\inc\c\DLib_Config_Normal.h" -Ol --predef_macros C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\Date.tmp
+  rspfile_name = C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\Date.xcl.rsp
+
+build C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\DisplayBoard.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\src\DisplayBoard.c -xcl_file C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\DisplayBoard.xcl -macro_file C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\DisplayBoard.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
+  flags = C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\src\DisplayBoard.c -o C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\Obj\src --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\inc\c\DLib_Config_Normal.h" -Ol --predef_macros C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\DisplayBoard.tmp
+  rspfile_name = C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\DisplayBoard.xcl.rsp
+
+build C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\Keypad.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\src\Keypad.c -xcl_file C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\Keypad.xcl -macro_file C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\Keypad.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
+  flags = C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\src\Keypad.c -o C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\Obj\src --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\inc\c\DLib_Config_Normal.h" -Ol --predef_macros C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\Keypad.tmp
+  rspfile_name = C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\Keypad.xcl.rsp
+
+build C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\light.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\src\light.c -xcl_file C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\light.xcl -macro_file C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\light.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
+  flags = C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\src\light.c -o C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\Obj\src --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\inc\c\DLib_Config_Normal.h" -Ol --predef_macros C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\light.tmp
+  rspfile_name = C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\light.xcl.rsp
+
+build C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\main.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\src\main.c -xcl_file C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\main.xcl -macro_file C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\main.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
+  flags = C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\src\main.c -o C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\Obj\src --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\inc\c\DLib_Config_Normal.h" -Ol --predef_macros C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\main.tmp
+  rspfile_name = C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\main.xcl.rsp
+
+build C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\menu.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\src\menu.c -xcl_file C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\menu.xcl -macro_file C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\menu.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
+  flags = C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\src\menu.c -o C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\Obj\src --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\inc\c\DLib_Config_Normal.h" -Ol --predef_macros C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\menu.tmp
+  rspfile_name = C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\menu.xcl.rsp
+
+build C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\pio.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\src\pio.c -xcl_file C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\pio.xcl -macro_file C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\pio.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
+  flags = C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\src\pio.c -o C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\Obj\src --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\inc\c\DLib_Config_Normal.h" -Ol --predef_macros C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\pio.tmp
+  rspfile_name = C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\pio.xcl.rsp
+
+build C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\temp.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\src\temp.c -xcl_file C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\temp.xcl -macro_file C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\temp.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
+  flags = C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\src\temp.c -o C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\Obj\src --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\inc\c\DLib_Config_Normal.h" -Ol --predef_macros C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\temp.tmp
+  rspfile_name = C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\temp.xcl.rsp
+
+build C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\Library\exceptions.pbi : INDEXER C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\Library\exceptions.xcl |  $
+C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\exceptions.c
+  flags = -out=C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\Library\exceptions.pbi -f C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\Library\exceptions.xcl
+
+build C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\Library\startup_sam3x.pbi : INDEXER C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\Library\startup_sam3x.xcl |  $
+C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\startup_sam3x.c
+  flags = -out=C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\Library\startup_sam3x.pbi -f C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\Library\startup_sam3x.xcl
+
+build C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\Library\system_sam3x.pbi : INDEXER C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\Library\system_sam3x.xcl |  $
+C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\system_sam3x.c
+  flags = -out=C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\Library\system_sam3x.pbi -f C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\Library\system_sam3x.xcl
+
+build C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\Date.pbi : INDEXER C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\Date.xcl |  $
+C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\src\Date.c
+  flags = -out=C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\Date.pbi -f C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\Date.xcl
+
+build C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\DisplayBoard.pbi : INDEXER C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\DisplayBoard.xcl |  $
+C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\src\DisplayBoard.c
+  flags = -out=C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\DisplayBoard.pbi -f C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\DisplayBoard.xcl
+
+build C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\Keypad.pbi : INDEXER C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\Keypad.xcl |  $
+C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\src\Keypad.c
+  flags = -out=C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\Keypad.pbi -f C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\Keypad.xcl
+
+build C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\light.pbi : INDEXER C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\light.xcl |  $
+C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\src\light.c
+  flags = -out=C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\light.pbi -f C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\light.xcl
+
+build C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\main.pbi : INDEXER C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\main.xcl |  $
+C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\src\main.c
+  flags = -out=C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\main.pbi -f C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\main.xcl
+
+build C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\menu.pbi : INDEXER C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\menu.xcl |  $
+C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\src\menu.c
+  flags = -out=C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\menu.pbi -f C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\menu.xcl
+
+build C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\pio.pbi : INDEXER C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\pio.xcl |  $
+C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\src\pio.c
+  flags = -out=C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\pio.pbi -f C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\pio.xcl
+
+build C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\temp.pbi : INDEXER C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\temp.xcl |  $
+C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\src\temp.c
+  flags = -out=C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\temp.pbi -f C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\temp.xcl
+
+build C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\Project.pbw : MAKEBROWSE C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\Project.pbd
+  flags = C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\Project.pbd -output C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\Project.pbw
+
+build C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\Project_part0.pbi : PDBLINK C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\Library\exceptions.pbi |  $
+C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\Library\startup_sam3x.pbi $
+C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\Library\system_sam3x.pbi
+  flags = -M C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\Project_part0.pbi C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\Library\exceptions.pbi C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\Library\startup_sam3x.pbi C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\Library\system_sam3x.pbi
+
+build C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\Project_part1.pbi : PDBLINK C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\Date.pbi |  $
+C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\DisplayBoard.pbi $
+C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\Keypad.pbi
+  flags = -M C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\Project_part1.pbi C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\Date.pbi C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\DisplayBoard.pbi C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\Keypad.pbi
+
+build C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\Project_part2.pbi : PDBLINK C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\light.pbi |  $
+C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\main.pbi $
+C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\menu.pbi
+  flags = -M C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\Project_part2.pbi C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\light.pbi C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\main.pbi C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\menu.pbi
+
+build C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\Project_part3.pbi : PDBLINK C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\pio.pbi |  $
+C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\temp.pbi
+  flags = -M C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\Project_part3.pbi C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\pio.pbi C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\src\temp.pbi
+
+build C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\Project.pbd : PDBLINK C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\Project_part0.pbi |  $
+C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\Project_part1.pbi $
+C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\Project_part2.pbi $
+C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\Project_part3.pbi
+  flags = -M C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\Project.pbd C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\Project_part0.pbi C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\Project_part1.pbi C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\Project_part2.pbi C$:\Users\tomas\OneDrive\Skrivbord\Git\School\Hardware\Project\Debug\BrowseInfo\Project_part3.pbi
+

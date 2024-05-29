@@ -1,0 +1,42 @@
+Date : 2022-12-15 22:41:50
+Directory : c:\Users\tomas\OneDrive\Skrivbord\Git\Hardware\Project\src
+Total : 16 files,  1202 codes, 55 comments, 383 blanks, all 1640 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| C        |          8 |      1,097 |         52 |        341 |      1,490 |
+| C++      |          8 |        105 |          3 |         42 |        150 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++-----------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                              | files      | code       | comment    | blank      | total      |
++-----------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                 |         16 |      1,202 |         55 |        383 |      1,640 |
+| Headers                                                                           |          8 |        105 |          3 |         42 |        150 |
++-----------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-----------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                                          | language | code       | comment    | blank      | total      |
++-----------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| c:\Users\tomas\OneDrive\Skrivbord\Git\Hardware\Project\src\Date.c                 | C        |        120 |          4 |         45 |        169 |
+| c:\Users\tomas\OneDrive\Skrivbord\Git\Hardware\Project\src\DisplayBoard.c         | C        |        185 |          1 |         69 |        255 |
+| c:\Users\tomas\OneDrive\Skrivbord\Git\Hardware\Project\src\Headers\Date.h         | C++      |         16 |          0 |          6 |         22 |
+| c:\Users\tomas\OneDrive\Skrivbord\Git\Hardware\Project\src\Headers\DisplayBoard.h | C++      |          6 |          1 |          4 |         11 |
+| c:\Users\tomas\OneDrive\Skrivbord\Git\Hardware\Project\src\Headers\Keypad.h       | C++      |          9 |          0 |          2 |         11 |
+| c:\Users\tomas\OneDrive\Skrivbord\Git\Hardware\Project\src\Headers\light.h        | C++      |          8 |          1 |          5 |         14 |
+| c:\Users\tomas\OneDrive\Skrivbord\Git\Hardware\Project\src\Headers\main.h         | C++      |          5 |          0 |          0 |          5 |
+| c:\Users\tomas\OneDrive\Skrivbord\Git\Hardware\Project\src\Headers\menu.h         | C++      |         21 |          0 |          6 |         27 |
+| c:\Users\tomas\OneDrive\Skrivbord\Git\Hardware\Project\src\Headers\pio.h          | C++      |         14 |          0 |          5 |         19 |
+| c:\Users\tomas\OneDrive\Skrivbord\Git\Hardware\Project\src\Headers\temp.h         | C++      |         26 |          1 |         14 |         41 |
+| c:\Users\tomas\OneDrive\Skrivbord\Git\Hardware\Project\src\Keypad.c               | C        |         29 |          2 |          7 |         38 |
+| c:\Users\tomas\OneDrive\Skrivbord\Git\Hardware\Project\src\light.c                | C        |        105 |         32 |         48 |        185 |
+| c:\Users\tomas\OneDrive\Skrivbord\Git\Hardware\Project\src\main.c                 | C        |         96 |          1 |         30 |        127 |
+| c:\Users\tomas\OneDrive\Skrivbord\Git\Hardware\Project\src\menu.c                 | C        |        332 |          3 |         78 |        413 |
+| c:\Users\tomas\OneDrive\Skrivbord\Git\Hardware\Project\src\pio.c                  | C        |         52 |          1 |         13 |         66 |
+| c:\Users\tomas\OneDrive\Skrivbord\Git\Hardware\Project\src\temp.c                 | C        |        178 |          8 |         51 |        237 |
+| Total                                                                             |          |      1,202 |         55 |        383 |      1,640 |
++-----------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
