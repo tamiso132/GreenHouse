@@ -1,4 +1,4 @@
-# GreenHouse project
+# GreenHouse project  (2022)
 
 ## About
 This project is about monitoring and controlling a greenhouse climate. A system that automatically reacts to outside factors in order to be as effecient as possible.
